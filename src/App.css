@@ -6,6 +6,11 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+@media (max-width: 500px) {
+  .gamecontainer {
+    width: 280px;
+  }
+}
 .gamecontainer {
   width: 500px;
 }

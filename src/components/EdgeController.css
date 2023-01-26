@@ -1,7 +1,12 @@
 .inner {
-    z-index: 4;
-    background-color: #F2F2F2;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+    z-index: 10;
+}
+.inner:after {
+    content: '\A';
+    position: absolute;
+    background: #F2F2F2;
+    top: 16.66666%; bottom: 0;
+    left: 16.666666%; 
+    width: 66.6666%;
+    height: 66.6666%;
 }

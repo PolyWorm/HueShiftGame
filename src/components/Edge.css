@@ -1,4 +1,20 @@
 .edge {
     background-color: white;
     margin: 0;
+    box-shadow: 0 0 10px #FFEB2E;
+}
+.yellowedge {
+    background-color: #FFEB2E;
+    transition: background-color 0.2s ease-out 100ms;
+    margin: 0;
+}
+.blueedge {
+    background-color: #45FBF3;
+    transition: background-color 0.2s ease-out 100ms;
+    margin: 0;
+}
+.rededge {
+    background-color: #FF84CB;
+    transition: background-color 0.2s ease-out 100ms;
+    margin: 0;
 }

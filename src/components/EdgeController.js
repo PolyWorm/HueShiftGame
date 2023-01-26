@@ -35,7 +35,7 @@ function EdgeController(props) {
     }
 
     return (
-      <div onClick={()=>switchEdges(indexofEdges)} className="inner" style={style}>
+      <div className="inner" onClick={()=>switchEdges(indexofEdges)}style={style}>
       </div>
     );
   }

@@ -1,5 +1,6 @@
 import './Gamebutton.css';
 import EdgeController from './EdgeController.js';
+import Backgroundfade from './Backgroundfade.js';
 import React from 'react'
 import {EdgeContext} from '../App.js'
 import {useContext} from 'react'
@@ -11,6 +12,7 @@ function Gamebutton(props) {
     
     const size = props.size
     const { edges, setEdges } = useContext(EdgeContext);
+    const outerlength = (8/((props.size * 9) + 1)) * 500;
     const length = (6/((props.size * 9) + 1)) * 500;
     //inner square size
     const innerlength = length * (2/3)
@@ -21,7 +23,23 @@ function Gamebutton(props) {
         let fullrownumber = (size * 2) + 1
         let remainder = (input % size) + 1
         let startingpoint = (rownumber * fullrownumber + remainder)
-        return [startingpoint, startingpoint + size + 1, startingpoint + size + size + 1, startingpoint + size]
+        return [startingpoint - 1, startingpoint + size + 1 - 1, startingpoint + size + size + 1 - 1, startingpoint + size - 1]
+    }
+    
+    function backgroundrotater(i, color, number) {
+        let tempedges = edgefinder(number)
+        switch (i) {
+            case 0:
+                return (<Backgroundfade styleguide={bgcolorsize} position={color+'top'} number={tempedges[i]}></Backgroundfade>)
+            case 1:
+                return (<Backgroundfade styleguide={bgcolorsize} position={color+'right'} number={tempedges[i]}></Backgroundfade>)
+            case 2:
+                return (<Backgroundfade styleguide={bgcolorsize} position={color+'bottom'} number={tempedges[i]}></Backgroundfade>)
+            case 3:
+                return (<Backgroundfade styleguide={bgcolorsize} position={color+'left'} number={tempedges[i]}></Backgroundfade>)
+            default:
+              console.log('something went amiss');
+          }
     }
     function rotater(i, color) {
         switch (i) {
@@ -41,11 +59,11 @@ function Gamebutton(props) {
         let choice = i % 3
         switch (choice) {
             case 0:
-                return 'red'
-            case 1:
                 return 'yellow'
-            case 2:
+            case 1:
                 return 'blue'
+            case 2:
+                return 'red'
             default:
               console.log('something went amiss');
           }
@@ -54,9 +72,13 @@ function Gamebutton(props) {
         width: length+"px",
         height: length+"px",
     }
+    const bgcolorsize = {
+        width: outerlength + "px",
+        height: outerlength + "px",
+    };
     const innersquare = {
-        width: innerlength+"px",
-        height: innerlength+"px",
+        width: outerlength+"px",
+        height: outerlength+"px",
     }
     let buttons = []
     let count = 0
@@ -65,12 +87,13 @@ function Gamebutton(props) {
         for (let j = 0; j < size; j++) {
             let edgesOfCurrentButton = edgefinder(count)
             let corners = []
-            corners.push(<EdgeController size={size} number={count}styleguide={innersquare}></EdgeController>)
+            corners.push(<EdgeController size={size} number={count}styleguide={styles}></EdgeController>)
             for (let k = 0; k < edgesOfCurrentButton.length; k++) {
                 let col = colorpicker(edgesOfCurrentButton[k])
+                corners.push(backgroundrotater(k, col, count))
                 corners.push(rotater(k, col))
             }
-            buttonrow.push(<div className="gamebutton" style={styles}>{corners}</div>)
+            buttonrow.push(<div className="gamebutton" style={bgcolorsize}>{corners}</div>)
             count += 1
         }
         buttons.push(

@@ -34,21 +34,21 @@ function Edge(props) {
     if (colorproperty == 0) {
         style2 = {"background-color": "#FFEB2E"}
         return (
-            <div style={{...style1, ...style2}} className="edge">
+            <div style={{...style1}} className="yellowedge">
             </div>
         );
     }
     if (colorproperty == 1) {
-        style2 = {"background-color": "#45FBF3"}
+        style2 = {"background-color": "#45FBF3", "box-shadow": "0 0 10px #FFEB2E;"}
         return (
-            <div style={{...style1, ...style2}} className="edge">
+            <div style={{...style1}} className="blueedge">
             </div>
         );
     }
     if (colorproperty == 2) {
-        style2 = {"background-color": "#FF84CB"}
+        style2 = {"background-color": "#FF84CB", "box-shadow": "0 0 10px #FFEB2E;"}
         return (
-            <div style={{...style1, ...style2}} className="edge">
+            <div style={{...style1}} className="rededge">
             </div>
         );
     }
