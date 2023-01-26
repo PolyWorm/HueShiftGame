@@ -1,0 +1,20 @@
+.Timer {
+    margin: auto;
+}
+.timertext{
+    text-align: center;
+    margin: auto;
+    font-size: 15px;
+    font-weight: 200;
+    color: #ffffff;
+    letter-spacing: .1rem;
+}
+.time{
+    text-align: center;
+    display: inline;
+    margin: auto;
+    font-size: 30px;
+    font-weight: 200;
+    color: #ffffff;
+    letter-spacing: .05rem;
+}

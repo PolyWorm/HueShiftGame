@@ -1,0 +1,26 @@
+.test {
+    width: 500px;
+    height: 500px;
+}
+.horizontalrow {
+    display: flex;
+}
+.verticalcolumn {
+    display: flex;
+    justify-content: space-between;
+}
+.horizontal {
+    height: 500px;
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-between;
+    display: flex;
+}
+.vertical {
+    width: 500px;
+    height: 500px;
+}
+
+.columns {
+    display: flex;
+}

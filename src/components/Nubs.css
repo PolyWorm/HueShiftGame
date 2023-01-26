@@ -1,0 +1,9 @@
+.nub {
+    background-color: #F2F2F2;
+    z-index: 3;
+}
+.nubrow {
+    display: flex;
+    justify-content: space-between;
+    
+}

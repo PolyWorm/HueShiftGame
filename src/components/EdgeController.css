@@ -1,0 +1,7 @@
+.inner {
+    z-index: 4;
+    background-color: #F2F2F2;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}

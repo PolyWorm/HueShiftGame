@@ -1,0 +1,24 @@
+.buttongrid {
+    width: 500px;
+    height: 500px;
+
+    margin-top: 0px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.edges {
+    margin-top: 0px;
+    position: absolute;
+}
+.gameboard {
+    justify-content: center;
+    display: flex;
+    width: 500px;
+    height: 500px;
+}
+.nubs {
+    width: 500px;
+    height: 500px;
+}

@@ -1,0 +1,87 @@
+.gamebutton {
+    position: block;
+    z-index: 3;
+
+    display: flex;
+    justify-content: center;
+}
+.inner {
+    z-index: 4;
+    background-color: #F2F2F2;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.yellowtop {
+    background-image: url("../assets/yellowtop.svg");
+    position: absolute;
+}
+.redtop {
+    background-image: url("../assets/redtop.svg");
+    position: absolute;
+}
+.bluetop {
+    background-image: url("../assets/bluetop.svg");
+    position: absolute;
+}
+.yellowright {
+    background-image: url("../assets/yellowwedge.svg");
+    position: absolute;
+    transform: rotate(90deg);
+}
+.redright {
+    background-image: url("../assets/redwedge.svg");
+    position: absolute;
+    transform: rotate(90deg);
+}
+.blueright {
+    background-image: url("../assets/bluewedge.svg");
+    position: absolute;
+    transform: rotate(90deg);
+}
+.yellowleft {
+    background-image: url("../assets/yellow.svg");
+    position: absolute;
+    transform: rotate(270deg);
+}
+.redleft {
+    background-image: url("../assets/red.svg");
+    position: absolute;
+    transform: rotate(270deg);
+    
+}
+.blueleft {
+    background-image: url("../assets/blue.svg");
+    position: absolute;
+    transform: rotate(270deg);
+}
+.yellowbottom {
+    background-image: url("../assets/yellowwedge.svg");
+    position: absolute;
+    transform: rotate(180deg);
+}
+.redbottom {
+    background-image: url("../assets/redwedge.svg");
+    position: absolute;
+    transform: rotate(180deg);
+}
+.bluebottom {
+    background-image: url("../assets/bluewedge.svg");
+    position: absolute;
+    transform: rotate(180deg);
+}
+
+
+.buttonrow {
+    display: flex;
+    justify-content: space-around;
+}
+.edges {
+    width: 500px;
+    height: 500px;
+}
+.nubs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

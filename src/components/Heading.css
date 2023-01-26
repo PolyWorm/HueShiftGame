@@ -1,0 +1,32 @@
+.heading {
+    margin-top: 100px;
+    margin-bottom: 30px;
+    width: 500px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+.logocontainer {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+
+
+}
+.logo {
+    background-image:url(../assets/logo.svg);
+    width: 20px;
+    height: 50px;
+    margin: auto;
+}
+.h1 {
+    margin: auto;
+    font-size: 36px;
+    color: #ffffff;
+    letter-spacing: .15rem;
+}
+.controlbar {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
