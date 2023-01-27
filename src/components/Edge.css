@@ -4,12 +4,15 @@
 }
 .yellowedge {
     background-color: #FFEB2E;
+    transition: background-color 0.2s ease-in 100ms;
     margin: 0;
 }
 .blueedge {
     background-color: #45FBF3;
+    transition: background-color 0.2s ease-in 100ms;
 }
 .rededge {
     background-color: #FF84CB;
+    transition: background-color 0.2s ease-in 100ms;
     margin: 0;
 }
