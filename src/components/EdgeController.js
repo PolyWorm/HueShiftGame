@@ -52,25 +52,25 @@ function EdgeController(props) {
             let color = colors[i] % 3
             let position = "top"
             if (i == 0) {
-                position = "up"
-            }
-            else if (i == 1) {
                 position = "right"
             }
-            else if (i == 2) {
+            else if (i == 1) {
                 position = "down"
             }
-            else if (i == 3) {
+            else if (i == 2) {
                 position = "left"
+            }
+            else if (i == 3) {
+                position = "up"
             }
             if (color == 0) {
                 tempbackgrounds.push("yellow " + position)
             }
             else if (color == 1) {
-                tempbackgrounds.push("blue " + position)
+                tempbackgrounds.push("red " + position)
             }
             else if (color == 2) {
-                tempbackgrounds.push("red " + position)
+                tempbackgrounds.push("blue " + position)
             }
         }
         backgroundsegments = tempbackgrounds

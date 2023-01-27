@@ -31,13 +31,13 @@ function Gamebutton(props) {
         let tempedges = edgefinder(number)
         switch (i) {
             case 0:
-                return (<Backgroundfade styleguide={bgcolorsize} position={color+'top'} number={tempedges[i]}></Backgroundfade>)
+                return (<Backgroundfade styleguide={bgcolorsize} position={color+'top2'} number={tempedges[i]}></Backgroundfade>)
             case 1:
-                return (<Backgroundfade styleguide={bgcolorsize} position={color+'right'} number={tempedges[i]}></Backgroundfade>)
+                return (<Backgroundfade styleguide={bgcolorsize} position={color+'right2'} number={tempedges[i]}></Backgroundfade>)
             case 2:
-                return (<Backgroundfade styleguide={bgcolorsize} position={color+'bottom'} number={tempedges[i]}></Backgroundfade>)
+                return (<Backgroundfade styleguide={bgcolorsize} position={color+'bottom2'} number={tempedges[i]}></Backgroundfade>)
             case 3:
-                return (<Backgroundfade styleguide={bgcolorsize} position={color+'left'} number={tempedges[i]}></Backgroundfade>)
+                return (<Backgroundfade styleguide={bgcolorsize} position={color+'left2'} number={tempedges[i]}></Backgroundfade>)
             default:
               console.log('something went amiss');
           }

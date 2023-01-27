@@ -1,57 +1,57 @@
-.yellowtop {
+.yellowtop2 {
     background-image: url("../assets/yellow.svg");
     position: absolute;
 }
-.redtop {
+.redtop2 {
     background-image: url("../assets/red.svg");
     position: absolute;
 }
-.bluetop {
+.bluetop2 {
     background-image: url("../assets/blue.svg");
     position: absolute;
 }
-.yellowright {
+.yellowright2 {
     background-image: url("../assets/yellow.svg");
     position: absolute;
     transform: rotate(90deg);
 }
-.redright {
+.redright2 {
     background-image: url("../assets/red.svg");
     position: absolute;
     transform: rotate(90deg);
 }
-.blueright {
+.blueright2 {
     background-image: url("../assets/blue.svg");
     position: absolute;
     transform: rotate(90deg);
 }
-.yellowleft {
+.yellowleft2 {
     background-image: url("../assets/yellow.svg");
     position: absolute;
     transform: rotate(270deg);
 }
-.redleft {
+.redleft2 {
     background-image: url("../assets/red.svg");
     position: absolute;
     transform: rotate(270deg);
     
 }
-.blueleft {
+.blueleft2 {
     background-image: url("../assets/blue.svg");
     position: absolute;
     transform: rotate(270deg);
 }
-.yellowbottom {
+.yellowbottom2 {
     background-image: url("../assets/yellow.svg");
     position: absolute;
     transform: rotate(180deg);
 }
-.redbottom {
+.redbottom2 {
     background-image: url("../assets/red.svg");
     position: absolute;
     transform: rotate(180deg);
 }
-.bluebottom {
+.bluebottom2 {
     background-image: url("../assets/blue.svg");
     position: absolute;
     transform: rotate(180deg);
