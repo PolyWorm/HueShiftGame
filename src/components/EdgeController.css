@@ -5,8 +5,69 @@
     content: '\A';
     position: absolute;
     background: #F2F2F2;
-    top: 16.66666%; bottom: 0;
-    left: 16.666666%; 
-    width: 66.6666%;
-    height: 66.6666%;
+    top: 30%; bottom: 0;
+    left: 30%; 
+    width: 40%;
+    height: 40%;
 }
+.red {
+    background-color: #FFEB2E;
+}
+.yellow {
+    background-color: #45FBF3;
+}
+.blue {
+    background-color: #FF84CB;
+}
+.up {
+    width: 0%;
+    height: 10%;
+    right: 10%;
+    position: absolute;
+    animation: 0.3s ease-out shrinkWidth 1;
+}
+.down {
+    width: 0%;
+    height: 10%;
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    animation: 0.3s ease-out shrinkWidth 1;
+}
+.left {
+    width: 10%;
+    height: 0%;
+    top: 10%;
+    position: absolute;
+    animation: 0.3s ease-out shrinkHeight 1;
+}
+.right {
+    width: 10%;
+    height: 0%;
+    bottom: 10%;
+    right: 0;
+    position: absolute;
+    animation: 0.3s ease-out shrinkHeight 1;
+}
+
+@keyframes shrinkWidth {
+    from {
+        width: 80%;
+    }
+    to {
+        width: 0%;
+    }
+}
+@keyframes shrinkHeight {
+    from {
+        height: 80%;
+    }
+    to {
+        height: 0%;
+    }
+}
+
+
+
+
+

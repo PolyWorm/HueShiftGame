@@ -14,8 +14,9 @@ function Gamebutton(props) {
     const { edges, setEdges } = useContext(EdgeContext);
     const outerlength = (8/((props.size * 9) + 1)) * 500;
     const length = (6/((props.size * 9) + 1)) * 500;
+    const edgecontrollerlength = (10/((props.size * 9) + 1)) * 500;
     //inner square size
-    const innerlength = length * (2/3)
+
 
 
     function edgefinder(input) {
@@ -77,8 +78,8 @@ function Gamebutton(props) {
         height: outerlength + "px",
     };
     const innersquare = {
-        width: outerlength+"px",
-        height: outerlength+"px",
+        width: edgecontrollerlength+"px",
+        height: edgecontrollerlength+"px",
     }
     let buttons = []
     let count = 0
@@ -87,7 +88,7 @@ function Gamebutton(props) {
         for (let j = 0; j < size; j++) {
             let edgesOfCurrentButton = edgefinder(count)
             let corners = []
-            corners.push(<EdgeController size={size} number={count}styleguide={styles}></EdgeController>)
+            corners.push(<EdgeController size={size} number={count}styleguide={innersquare}></EdgeController>)
             for (let k = 0; k < edgesOfCurrentButton.length; k++) {
                 let col = colorpicker(edgesOfCurrentButton[k])
                 corners.push(backgroundrotater(k, col, count))
