@@ -8,7 +8,7 @@ export const EdgeContext = React.createContext()
 
 function App() {
 
-  const [getSize, setSize] = useState(2);
+  const [getSize, setSize] = useState(3);
   const [edges, setEdges] = useState([]);
 
   return (
@@ -17,7 +17,6 @@ function App() {
         <div className="gamecontainer">
           <Heading size={getSize} setSize={setSize}></Heading>
           <Gameboard size={getSize} edges={edges} setEdges={setEdges}></Gameboard>
-          <div>{edges}</div>
         </div>
       </div>
     </EdgeContext.Provider>

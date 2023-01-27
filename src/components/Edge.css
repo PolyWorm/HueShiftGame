@@ -4,15 +4,19 @@
 }
 .yellowedge {
     background-color: #00E562;
-    transition: background-color 0.2s ease-in 100ms;
+    box-shadow: 0 0 10px rgba(0, 229, 98, 1);
+    transition: background-color 0.2s ease-in 100ms, box-shadow 0.2s ease-in 100ms;
     margin: 0;
 }
 .blueedge {
     background-color: #0078FF;
-    transition: background-color 0.2s ease-in 100ms;
+    box-shadow: 0 0 10px rgba(0, 120, 255, 1);
+    margin: 0;
+    transition: background-color 0.2s ease-in 100ms, box-shadow 0.2s ease-in 100ms;
 }
 .rededge {
     background-color: #FF4685;
-    transition: background-color 0.2s ease-in 100ms;
+    box-shadow: 0 0 10px rgba(255, 70, 133, 1);
+    transition: background-color 0.2s ease-in 100ms, box-shadow 0.2s ease-in 100ms;
     margin: 0;
 }
