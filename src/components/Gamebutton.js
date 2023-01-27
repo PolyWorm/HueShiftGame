@@ -4,17 +4,25 @@ import Backgroundfade from './Backgroundfade.js';
 import React from 'react'
 import {EdgeContext} from '../App.js'
 import {useContext} from 'react'
+import useWindowDimensions from '../hooks/useWindowDimensions.js';
 
 
 function Gamebutton(props) {
+    const { height, width } = useWindowDimensions();
+    let gameboardsize = 0
+    if (width < 520) {
+        gameboardsize = 280
+    }
+    else {
+        gameboardsize = 500
+    }
     //equation for finding the width of the button.
-
     
     const size = props.size
     const { edges, setEdges } = useContext(EdgeContext);
-    const outerlength = (8/((props.size * 9) + 1)) * 500;
-    const length = (6/((props.size * 9) + 1)) * 500;
-    const edgecontrollerlength = (10/((props.size * 9) + 1)) * 500;
+    const outerlength = (8/((props.size * 9) + 1)) * gameboardsize;
+    const length = (6/((props.size * 9) + 1)) * gameboardsize;
+    const edgecontrollerlength = (10/((props.size * 9) + 1)) * gameboardsize;
     //inner square size
 
 

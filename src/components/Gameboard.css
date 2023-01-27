@@ -1,9 +1,10 @@
-.buttongrid {
+.buttongrid {    
     width: 500px;
     height: 500px;
 
     margin-top: 0px;
     position: absolute;
+    margin-top: 0px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -21,4 +22,15 @@
 .nubs {
     width: 500px;
     height: 500px;
+    position: absolute;
 }
+@media screen and (max-width: 520px) {
+    .gameboard {
+        width: 280px;
+        height: 280px;
+    }
+    .nubs {
+        width: 280px;
+        height: 280px;
+    }
+  }

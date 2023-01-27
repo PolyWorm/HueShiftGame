@@ -3,15 +3,24 @@ import Edge from './Edge.js';
 import React from 'react'
 import {EdgeContext} from '../App.js'
 import {useContext} from 'react';
+import useWindowDimensions from '../hooks/useWindowDimensions.js';
 
 function Edges(props) {
+    const { height, width } = useWindowDimensions();
+    let gameboardsize = 0
+    if (width < 520) {
+        gameboardsize = 280
+    }
+    else {
+        gameboardsize = 500
+    }
     //equation for finding the width of the edges.
     const { edges, setEdges } = useContext(EdgeContext);
     let edgecount = edges.length
     let size = props.size
     let count = size
-    const width = (1/((props.size * 9) + 1)) * 500;
-    const length = 500 / props.size;
+    const width2 = (1/((props.size * 9) + 1)) * gameboardsize;
+    const length = gameboardsize / props.size;
     let horizontaledges = []
     let verticaledges = []
 

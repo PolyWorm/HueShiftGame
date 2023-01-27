@@ -1,10 +1,19 @@
 import './Nubs.css';
 import React from 'react'
+import useWindowDimensions from '../hooks/useWindowDimensions.js';
 
 function Nubs(props) {
     //equation for finding the width of the nub.
+    const { height, width } = useWindowDimensions();
+    let gameboardsize = 0
+    if (width < 520) {
+        gameboardsize = 280
+    }
+    else {
+        gameboardsize = 500
+    }
     const size = props.size
-    const length = (1/((props.size * 9) + 1)) * 500;
+    const length = (1/((props.size * 9) + 1)) * gameboardsize;
     const styles = {
         width: length+"px",
         height: length+"px",

@@ -24,3 +24,21 @@
 .columns {
     display: flex;
 }
+@media screen and (max-width: 520px) {
+    .test {
+        width: 280px;
+        height: 280px;
+    }
+
+    .horizontal {
+        height: 280px;
+        position: absolute;
+        flex-direction: column;
+        justify-content: space-between;
+        display: flex;
+    }
+    .vertical {
+        width: 280px;
+        height: 280px;
+    }
+  }

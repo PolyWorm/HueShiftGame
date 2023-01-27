@@ -1,6 +1,7 @@
 .nub {
     background-color: #F2F2F2;
-    z-index: 3;
+    z-index: 9;
+
 }
 .nubrow {
     display: flex;

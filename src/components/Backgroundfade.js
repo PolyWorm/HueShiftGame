@@ -11,7 +11,7 @@ function Backgroundfade(props) {
     let opacitized = { opacity: "0%", 
     transition: "opacity 0.3s ease-out 100ms"};
     if (number % 3 == edges[number] % 3) {
-        opacitized = { opacity: "40%", 
+        opacitized = { opacity: "60%", 
         transition: "opacity 0.3s ease-out 100ms"};
     }
     return (

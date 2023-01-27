@@ -1,4 +1,4 @@
-import './Besttime.css';
+import './Timer.css';
 import React from 'react'
 
 function Besttime(props) {

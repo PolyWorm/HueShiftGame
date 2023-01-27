@@ -2,31 +2,39 @@ import './Edge.css';
 import { useEffect, useState, useContext } from 'react';
 import React from 'react'
 import {EdgeContext} from '../App.js'
-
+import useWindowDimensions from '../hooks/useWindowDimensions.js';
 
 function Edge(props) {
+    const { height, width } = useWindowDimensions();
+    let gameboardsize = 0
+    if (width < 520) {
+        gameboardsize = 280
+    }
+    else {
+        gameboardsize = 500
+    }
     
     const size = props.size
     const { edges, setEdges } = useContext(EdgeContext);
     const colorproperty = edges[props.indexof] % 3
     const indexof = props.indexof
-    const width = (1/((props.size * 9) + 1)) * 500;
-    const length = 500 / size;
+    const width2 = (1/((props.size * 9) + 1)) * gameboardsize;
+    const length = gameboardsize / size;
     let style1 = {
         width: length+"px",
-        height: width+"px"
+        height: width2+"px"
     }
     let style2 = {}
 
     if (props.position == "horizontal") {
         style1 = {       
             width: length+"px",
-            height: width+"px"
+            height: width2+"px"
         }
     }
     else if (props.position == "vertical") {
         style1 = {       
-            width: width+"px",
+            width: width2+"px",
             height: length+"px"
         }
     }

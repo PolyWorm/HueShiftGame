@@ -1,3 +1,4 @@
+
 .Timer {
     margin: auto;
 }
@@ -18,3 +19,11 @@
     color: #ffffff;
     letter-spacing: .05rem;
 }
+@media screen and (max-width: 520px) {
+    .timertext{
+        font-size: 10px;
+    }
+    .time{
+        font-size: 20px;
+    }
+  }

@@ -8,7 +8,7 @@ export const EdgeContext = React.createContext()
 
 function App() {
 
-  const [getSize, setSize] = useState(1);
+  const [getSize, setSize] = useState(2);
   const [edges, setEdges] = useState([]);
 
   return (

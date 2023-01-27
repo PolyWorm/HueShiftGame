@@ -5,10 +5,19 @@ import Edges from './Edges';
 import Nubs from './Nubs.js';
 import { useState, useEffect, useContext} from 'react';
 import {EdgeContext} from '../App.js'
+import useWindowDimensions from '../hooks/useWindowDimensions.js';
 
 function Gameboard(props) {
+    const { height, width } = useWindowDimensions();
+    let gameboardsize = 0
+    if (width < 520) {
+        gameboardsize = 280
+    }
+    else {
+        gameboardsize = 500
+    }
     const size = props.size
-    const edgeweight = (1/((props.size * 9) + 1)) * 500;
+    const edgeweight = (1/((props.size * 9) + 1)) * gameboardsize;
     const marginofbutton = edgeweight / 2;
     const { edges, setEdges } = useContext(EdgeContext);
     let edgenumber = (props.size*(props.size+1) * 2)
@@ -26,7 +35,7 @@ function Gameboard(props) {
     useEffect(() => {
         setEdges(edge);
       }, [size])
-    let buttongridsize = 500 - edgeweight
+    let buttongridsize = gameboardsize - edgeweight
     let sizing = {width: buttongridsize,
         height: buttongridsize,
         "margin-top": marginofbutton+"px" }
