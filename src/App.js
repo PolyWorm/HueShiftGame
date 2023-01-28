@@ -10,7 +10,7 @@ export const TimerContext = React.createContext()
 
 function App() {
 
-  const [getSize, setSize] = useState(1);
+  const [getSize, setSize] = useState(2);
   const [edges, setEdges] = useState([]);
   const [isActive, setIsActive] = useState(false)
   const [isScrambled, setScrambled] = useState(false)
@@ -25,6 +25,7 @@ function App() {
           <div className="gamecontainer">
             <Heading size={getSize} setSize={setSize}></Heading>
             <Gameboard size={getSize} edges={edges} setEdges={setEdges}></Gameboard>
+
           </div>
         </div>
       </TimerContext.Provider>

@@ -21,13 +21,13 @@ function Heading(props) {
                     <div className="logo"/>
                     <h1 className="h1">hueshift.io</h1>
                 </div>
-                <Besttime></Besttime>
+                <Besttime size={size}></Besttime>
                 <Timer time={time}></Timer>
             </div>
             <div className="controlbar">
+                <Button setSize={setSize} size={2} otherSize={size} edges={props.edges}></Button>
                 <Button setSize={setSize} size={3} otherSize={size} edges={props.edges}></Button>
                 <Button setSize={setSize} size={4} otherSize={size} edges={props.edges}></Button>
-                <Button setSize={setSize} size={5} otherSize={size} edges={props.edges}></Button>
                 <Reset size={size}></Reset>
             </div>
         </header>

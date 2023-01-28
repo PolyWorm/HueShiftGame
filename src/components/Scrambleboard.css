@@ -2,13 +2,16 @@
     position: absolute;
     width: 500px;
     height: 355px;
-    background-color: #F2F2F2;
     text-align: center;
     letter-spacing: .1rem;
     z-index: 20;
-    opacity: 80%;
     padding-top: 145px;
-    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    background: rgba(228, 228, 228, 0.48);
+    border-radius: 0px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.3px);
+    -webkit-backdrop-filter: blur(7.3px);
+        
 }
 .text3 {
     margin: 0;
