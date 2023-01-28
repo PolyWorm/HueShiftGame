@@ -3,6 +3,7 @@ import React from 'react'
 import Gamebutton from './Gamebutton.js';
 import Edges from './Edges';
 import Nubs from './Nubs.js';
+import Scrambleboard from './Scrambleboard.js';
 import { useState, useEffect, useContext} from 'react';
 import {EdgeContext} from '../App.js'
 import useWindowDimensions from '../hooks/useWindowDimensions.js';
@@ -44,6 +45,7 @@ function Gameboard(props) {
 
     return (
         <div className="gameboard">
+            <Scrambleboard size={size}></Scrambleboard>
             <div className="nubs">
                 <Nubs size={size}></Nubs>
             </div>
