@@ -1,11 +1,14 @@
 import './Timer.css';
-import React, { useContext } from 'react';
-import { TimerContext } from '../App.js';
+import React, { useContext, useEffect } from 'react';
+import { TimerContext, EdgeContext } from '../App.js';
+import solvedState from '../hooks/useSolvedState.js';
 
 
 function Timer(props) {
-  let {isActive, isScrambled, setScrambled, setIsActive, time, setTime} = useContext(TimerContext);
-  React.useEffect(() => {
+  let {isActive, isScrambled, setScrambled, setIsActive, time, setTime, isSolved, setIsSolved} = useContext(TimerContext);
+  let {edges, setEdges} = useContext(EdgeContext);
+  
+  useEffect(() => {
     let interval = null;
   
     if (isActive) {

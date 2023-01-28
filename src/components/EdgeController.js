@@ -1,7 +1,8 @@
 import './EdgeController.css';
 import React from 'react'
-import {EdgeContext} from '../App.js'
-import {useContext, useState} from 'react'
+import {EdgeContext, TimerContext} from '../App.js'
+import {useContext, useState, useEffect} from 'react'
+import solvedState from '../hooks/useSolvedState.js';
 
 function EdgeController(props) {
     
@@ -9,6 +10,7 @@ function EdgeController(props) {
     let style = props.styleguide
     let backgroundsegments = []
     const { edges, setEdges } = useContext(EdgeContext);
+    let {isActive, isScrambled, setScrambled, setIsActive, time, setTime, isSolved, setIsSolved} = useContext(TimerContext);
 
     const number = props.number
     function edgefinder(input) {
@@ -43,6 +45,10 @@ function EdgeController(props) {
             tempnewedges[iofE[i]] = tempedges[i]
         }
         setEdges(tempnewedges)
+        if (solvedState(tempnewedges)) {
+            setIsActive(false)
+          }
+
     }
     function animateEdge() {
         let tempbackgrounds = []
@@ -77,7 +83,7 @@ function EdgeController(props) {
     }
     animateEdge()
     return (
-      <div className="inner" onClick={()=>switchEdges(indexofEdges)} style={style}>
+      <div className="inner" onClick={()=>{switchEdges(indexofEdges);}} style={style}>
         <div key={controllededges[0]} className={`${backgroundsegments[0]}`}></div>
         <div key={controllededges[1]} className={`${backgroundsegments[1]}`}></div>
         <div key={controllededges[2]} className={`${backgroundsegments[2]}`}></div>

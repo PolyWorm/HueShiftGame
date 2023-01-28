@@ -17,7 +17,6 @@ function Heading(props) {
     return (
         <header>
             <div className="heading">
-             
                 <div className="logocontainer">
                     <div className="logo"/>
                     <h1 className="h1">hueshift.io</h1>
