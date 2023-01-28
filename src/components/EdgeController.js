@@ -10,7 +10,7 @@ function EdgeController(props) {
     let style = props.styleguide
     let backgroundsegments = []
     const { edges, setEdges } = useContext(EdgeContext);
-    let {isActive, isScrambled, setScrambled, setIsActive, time, setTime, isSolved, setIsSolved} = useContext(TimerContext);
+    let {isActive, isScrambled, setScrambled, setIsActive, time, setTime, isSolved, setIsSolved, bestTime, bestTime2, bestTime3, setBestTime, setBestTime2, setBestTime3} = useContext(TimerContext);
 
     const number = props.number
     function edgefinder(input) {
@@ -47,9 +47,32 @@ function EdgeController(props) {
         setEdges(tempnewedges)
         if (solvedState(tempnewedges)) {
             setIsActive(false)
+            setIsSolved(true)
+            highScoreUpdate()
           }
 
     }
+    function highScoreUpdate() {
+        if (size == 2) {
+            if (bestTime === null || time < bestTime) {
+                setBestTime(time)
+                localStorage.setItem('hs1', time)
+            }
+        }
+        if (size == 3) {
+            if (bestTime === null || time < bestTime) {
+                setBestTime(time)
+                localStorage.setItem('hs2', time)
+            }
+        }
+        if (size == 2) {
+            if (bestTime === null || time < bestTime) {
+                setBestTime(time)
+                localStorage.setItem('hs3', time)
+            }
+        }
+    }
+
     function animateEdge() {
         let tempbackgrounds = []
 

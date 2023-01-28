@@ -11,6 +11,9 @@ function Heading(props) {
 
 
     let {isActive, isScrambled, setScrambled, setIsActive, time, setTime} = useContext(TimerContext);
+    const [bestTime, setBestTime] = useState(localStorage.getItem('hs1'));
+    const [bestTime2, setBestTime2] = useState(localStorage.getItem('hs2'));
+    const [bestTime3, setBestTime3] = useState(localStorage.getItem('hs3'));
     const setSize = props.setSize
     const size = props.size
 
@@ -21,7 +24,9 @@ function Heading(props) {
                     <div className="logo"/>
                     <h1 className="h1">hueshift.io</h1>
                 </div>
-                <Besttime size={size}></Besttime>
+                <Besttime size={size} bestTime={bestTime} setBestTime={setBestTime}
+                     bestTime2={bestTime2} setBestTime2={setBestTime2}
+                     bestTime3={bestTime3} setBestTime3={setBestTime3}></Besttime>
                 <Timer time={time}></Timer>
             </div>
             <div className="controlbar">

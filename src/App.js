@@ -1,7 +1,6 @@
 import './App.css';
 import Heading from './components/Heading.js';
 import Gameboard from './components/Gameboard.js';
-import Scrambleboard from './components/Scrambleboard';
 import React from 'react'
 import { useState } from 'react';
 
@@ -17,14 +16,19 @@ function App() {
   const [isSolved, setIsSolved] = useState(false)
   const [isPaused, setIsPaused] = useState(true)
   const [time, setTime] = useState(0)
+  const [bestTime, setBestTime] = useState(localStorage.getItem('hs1'));
+  const [bestTime2, setBestTime2] = useState(localStorage.getItem('hs2'));
+  const [bestTime3, setBestTime3] = useState(localStorage.getItem('hs3'));
 
   return (
     <EdgeContext.Provider value={{edges, setEdges}}>
-      <TimerContext.Provider value={{isActive, isScrambled, setScrambled, setIsActive, time, setTime, isSolved, setIsSolved}}>
+      <TimerContext.Provider value={{isActive, isScrambled, setScrambled, setIsActive, time, setTime, isSolved, setIsSolved, bestTime, bestTime2, bestTime3, setBestTime, setBestTime2, setBestTime3}}>
         <div className="body">
           <div className="gamecontainer">
-            <Heading size={getSize} setSize={setSize}></Heading>
-            <Gameboard size={getSize} edges={edges} setEdges={setEdges}></Gameboard>
+            <Heading size={getSize} setSize={setSize}>
+            </Heading>
+            <Gameboard size={getSize} edges={edges} setEdges={setEdges}  
+              setBestTime={setBestTime} setBestTime2={setBestTime2} setBestTime3={setBestTime3} ></Gameboard>
 
           </div>
         </div>

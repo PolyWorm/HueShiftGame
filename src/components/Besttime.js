@@ -1,23 +1,40 @@
 import './Timer.css';
-import React from 'react'
+import React, { useContext, useState } from 'react';
+import { TimerContext, EdgeContext } from '../App.js';
 
 function Besttime(props) {
-  if (localStorage.getItem("highscore2x2") === null) {
-    localStorage.setItem('highscore2x2', '0');
+  let {isActive, isScrambled, setScrambled, setIsActive, time, setTime, isSolved, setIsSolved, bestTime, bestTime2, bestTime3,} = useContext(TimerContext);
+
+  let size = props.size
+  let text = ""
+  if (size == 2) {
+    if (bestTime === null){
+      text = "none"
+    }
+    else {
+      text = (("0" + Math.floor(( localStorage.getItem('hs1')/ 60000) % 60)).slice(-2) + ":" + ("0" + Math.floor((localStorage.getItem('hs1') / 1000) % 60)).slice(-2))
+    }
   }
-  if (localStorage.getItem("highscore3x3") === null) {
-    localStorage.setItem('highscore3x3', '0');
+  if (size == 3) {
+    if (bestTime2 === null){
+      text = "none"
+    }
+    else {
+      text = (("0" + Math.floor(( localStorage.getItem('hs2')/ 60000) % 60)).slice(-2) + ":" + ("0" + Math.floor((localStorage.getItem('hs2') / 1000) % 60)).slice(-2))
+    }
   }
-  if (localStorage.getItem("highscore4x4") === null) {
-    localStorage.setItem('highscore4x4', '0');
-  }
-  if (localStorage.getItem("highscore5x5") === null) {
-    localStorage.setItem('highscore4x4', '0');
+  if (size == 4) {
+    if (bestTime3 === null){
+      text = "none"
+    }
+    else {
+      text = (("0" + Math.floor(( localStorage.getItem('hs3')/ 60000) % 60)).slice(-2) + ":" + ("0" + Math.floor((localStorage.getItem('hs3') / 1000) % 60)).slice(-2))
+    }
   }
   return (
     <div className="Timer">
         <h4 className="timertext">best</h4>
-        <h2 className="time">0:00</h2>
+        <h2 className="time">{text}</h2>
     </div>
   );
 }

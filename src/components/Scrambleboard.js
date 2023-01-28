@@ -6,10 +6,10 @@ import { fullScramble } from '../hooks/useFullScramble.js';
 
 function Scrambleboard(props) {
     let {edges, setEdges} = useContext(EdgeContext);
-    let {isActive, isScrambled, setScrambled, setIsActive, time, setTime} = useContext(TimerContext);
+    let {isActive, isScrambled, setScrambled, setIsActive, time, setTime, isSolved, setIsSolved} = useContext(TimerContext);
     let size = props.size;
     let opacitized = { opacity: "80%", 
-        transition: "opacity 0.2s ease-out 100ms, width 0.3s ease-out 100ms"};
+        transition: "opacity 0.2s ease-out 100ms"};
     let textstyle = {
         display: "block"
     }

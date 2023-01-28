@@ -12,6 +12,7 @@ function Button(props) {
       setSize(size)
       setScrambled(false); 
       setIsActive(false);
+      setTime(0);
       }} >
         <h2 className="text">{props.size}x{props.size}</h2>
     </div>
