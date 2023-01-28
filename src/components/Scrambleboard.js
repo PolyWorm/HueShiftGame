@@ -11,8 +11,7 @@ function Scrambleboard(props) {
     let opacitized = { opacity: "80%", 
         transition: "opacity 0.2s ease-out 100ms"};
     if (isSolved) {
-        opacitized = { opacity: "0%", 
-        transition: "opacity 0.2s ease-out 100ms"};
+        
     }
     let textstyle = {
         display: "block"
