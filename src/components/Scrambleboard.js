@@ -10,6 +10,10 @@ function Scrambleboard(props) {
     let size = props.size;
     let opacitized = { opacity: "80%", 
         transition: "opacity 0.2s ease-out 100ms"};
+    if (isSolved) {
+        opacitized = { opacity: "0%", 
+        transition: "opacity 0.2s ease-out 100ms"};
+    }
     let textstyle = {
         display: "block"
     }
@@ -29,6 +33,7 @@ function Scrambleboard(props) {
             fullScramble(edges, setEdges, props.size); 
             setScrambled(true); 
             setIsActive(true);
+            setIsSolved(false);
             setTime(0);
             }} 
             className="scramble"

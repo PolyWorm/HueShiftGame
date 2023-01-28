@@ -9,7 +9,7 @@ function Besttime(props) {
   let text = ""
   if (size == 2) {
     if (bestTime === null){
-      text = "none"
+      text = "--:--"
     }
     else {
       text = (("0" + Math.floor(( localStorage.getItem('hs1')/ 60000) % 60)).slice(-2) + ":" + ("0" + Math.floor((localStorage.getItem('hs1') / 1000) % 60)).slice(-2))
@@ -17,7 +17,7 @@ function Besttime(props) {
   }
   if (size == 3) {
     if (bestTime2 === null){
-      text = "none"
+      text = "--:--"
     }
     else {
       text = (("0" + Math.floor(( localStorage.getItem('hs2')/ 60000) % 60)).slice(-2) + ":" + ("0" + Math.floor((localStorage.getItem('hs2') / 1000) % 60)).slice(-2))
@@ -25,7 +25,7 @@ function Besttime(props) {
   }
   if (size == 4) {
     if (bestTime3 === null){
-      text = "none"
+      text = "--:--"
     }
     else {
       text = (("0" + Math.floor(( localStorage.getItem('hs3')/ 60000) % 60)).slice(-2) + ":" + ("0" + Math.floor((localStorage.getItem('hs3') / 1000) % 60)).slice(-2))

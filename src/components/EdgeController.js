@@ -48,6 +48,7 @@ function EdgeController(props) {
         if (solvedState(tempnewedges)) {
             setIsActive(false)
             setIsSolved(true)
+            setScrambled(false)
             highScoreUpdate()
           }
 
@@ -60,14 +61,14 @@ function EdgeController(props) {
             }
         }
         if (size == 3) {
-            if (bestTime === null || time < bestTime) {
-                setBestTime(time)
+            if (bestTime2 === null || time < bestTime2) {
+                setBestTime2(time)
                 localStorage.setItem('hs2', time)
             }
         }
         if (size == 2) {
-            if (bestTime === null || time < bestTime) {
-                setBestTime(time)
+            if (bestTime3 === null || time < bestTime3) {
+                setBestTime3(time)
                 localStorage.setItem('hs3', time)
             }
         }
