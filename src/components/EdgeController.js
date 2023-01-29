@@ -66,7 +66,7 @@ function EdgeController(props) {
                 localStorage.setItem('hs2', time)
             }
         }
-        if (size == 2) {
+        if (size == 4) {
             if (bestTime3 === null || time < bestTime3) {
                 setBestTime3(time)
                 localStorage.setItem('hs3', time)
