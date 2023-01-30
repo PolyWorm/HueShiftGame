@@ -1,33 +1,77 @@
 .scramble {
+    
     position: absolute;
     width: 500px;
-    height: 355px;
-    text-align: center;
+    height: 500px;
+    align-items: center;
     letter-spacing: .1rem;
     z-index: 20;
-    padding-top: 145px;
-
-    background: rgba(255, 255, 255, 0.497);
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 30px );
-    -webkit-backdrop-filter: blur( 20px );
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+    background: rgba(255, 255, 255, 0);
+    box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
+    backdrop-filter: blur(20px) saturate(10%);
+    justify-content: center;
         
+}
+.headingtext {
+    color: #f2f2f2;
+    margin: 0;
+    font-size: 20px;
+    font-weight: 350;
+    display: flex;
+}
+.timetext {
+    color: #f2f2f2;
+    margin: 0;
+    font-size: 60px;
+    font-weight: 350;
+    display: flex;
+}
+.besttimetext {
+    color: #f2f2f2;
+    margin: 0;
+    font-size: 50px;
+    font-weight: 350;
+    display: flex;
 }
 .text3 {
     margin: 0;
-    color: #2A2A2A;
-    font-size: 150px;
+    color: #f2f2f2;
+    font-size: 180px;
     font-weight: 150;
+    background: none; 
+    border: none; 
+    display: flex;
+}
+.text4 {
+    margin: 0;
+    color: #f2f2f2;
+    font-size: 80px;
+    font-weight: 150;
+    background: none; 
+    border: none; 
+    display: flex;
 }
 @media screen and (max-width: 520px) {
     .scramble {
         width: 280px;
-        height: 200px;
-        padding-top: 80px;
+        height: 280px;
     }
     .text3 {
         margin: 0;
-        color: #2A2A2A;
+        color: #f2f2f2;
         font-size: 80px;
+    }
+    .headingtext {
+        color: #f2f2f2;
+        font-size: 15px;
+        font-weight: 150;
+    }
+    .timetext {
+        color: #f2f2f2;
+        font-size: 45px;
+        font-weight: 150;
     }
   }
