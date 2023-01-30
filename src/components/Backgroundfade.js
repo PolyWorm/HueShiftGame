@@ -8,10 +8,10 @@ function Backgroundfade(props) {
     let bgcolorsize = props.styleguide;
     const { edges, setEdges } = useContext(EdgeContext);
     let number = props.number;
-    let opacitized = { opacity: "0%", 
+    let opacitized = { opacity: "50%", 
     transition: "opacity 0.3s ease-out 100ms"};
     if (number % 3 == edges[number] % 3) {
-        opacitized = { opacity: "60%", 
+        opacitized = { opacity: "90%", 
         transition: "opacity 0.3s ease-out 100ms"};
     }
     return (
