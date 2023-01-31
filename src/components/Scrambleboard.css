@@ -59,16 +59,42 @@
         width: 280px;
         height: 280px;
     }
-    .text3 {
-        margin: 0;
-        font-size: 80px;
-    }
     .headingtext {
-        font-size: 15px;
-        font-weight: 150;
+        color: #f2f2f2;
+        margin: 0;
+        font-size: 10px;
+        font-weight: 350;
     }
     .timetext {
-        font-size: 45px;
+        color: #f2f2f2;
+        margin: 0;
+        font-size: 30px;
+        font-weight: 350;
+        display: flex;
+    }
+    .besttimetext {
+        color: #f2f2f2;
+        margin: 0;
+        font-size: 25px;
+        font-weight: 350;
+        display: flex;
+    }
+    .text3 {
+        margin: 0;
+        color: #f2f2f2;
+        font-size: 90px;
         font-weight: 150;
+        background: none; 
+        border: none; 
+        display: flex;
+    }
+    .text4 {
+        margin: 0;
+        color: #f2f2f2;
+        font-size: 60px;
+        font-weight: 150;
+        background: none; 
+        border: none; 
+        display: flex;
     }
   }
