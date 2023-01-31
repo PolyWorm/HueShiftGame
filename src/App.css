@@ -1,13 +1,17 @@
 .body {
   background-color: #2A2A2A;
-  width: 100vw;
-  height: 150vh;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 .gamecontainer {
   width: 500px;
+}
+.foot {
+  width: 500px;
+  height: 200px;
 }
 @media screen and (max-width: 520px) {
   .gamecontainer {

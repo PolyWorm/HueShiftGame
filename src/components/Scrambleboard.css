@@ -1,5 +1,4 @@
 .scramble {
-    
     position: absolute;
     width: 500px;
     height: 500px;
@@ -10,11 +9,12 @@
     display: flex;
     flex-wrap: wrap;
     background: rgba(255, 255, 255, 0);
-    box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
+    box-shadow: 0 8px 32px 0 rgb(31, 38, 135, 0.37);
+    -webkit-backdrop-filter: blur(20px) saturate(10%);
     backdrop-filter: blur(20px) saturate(10%);
     justify-content: center;
-        
-}
+  }
+  
 .headingtext {
     color: #f2f2f2;
     margin: 0;

@@ -29,7 +29,7 @@ function App() {
             </Heading>
             <Gameboard size={getSize} edges={edges} setEdges={setEdges}  
               setBestTime={setBestTime} setBestTime2={setBestTime2} setBestTime3={setBestTime3} ></Gameboard>
-
+            <div className="foot"></div>
           </div>
         </div>
       </TimerContext.Provider>
