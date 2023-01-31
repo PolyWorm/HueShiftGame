@@ -17,5 +17,9 @@
   .gamecontainer {
     width: 280px;
   }
+  .foot {
+    width: 280px;
+    height: 200px;
+  }
 }
 
