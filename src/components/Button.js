@@ -8,7 +8,7 @@ function Button(props) {
   let size = props.size
   
   return (
-    <div className="button" onClick={() => { 
+    <button className="button" onClick={() => { 
       setSize(size)
       setScrambled(false); 
       setIsActive(false);
@@ -16,7 +16,7 @@ function Button(props) {
       setIsSolved(false);
       }} >
         <h2 className="text">{props.size}x{props.size}</h2>
-    </div>
+    </button>
   );
 }
 

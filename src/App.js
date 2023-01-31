@@ -29,7 +29,10 @@ function App() {
             </Heading>
             <Gameboard size={getSize} edges={edges} setEdges={setEdges}  
               setBestTime={setBestTime} setBestTime2={setBestTime2} setBestTime3={setBestTime3} ></Gameboard>
-            <div className="foot"></div>
+            <div className="foot">
+              <p className="instructions"><strong className="boldletters">instructions:</strong> click the squares to rotate the edges and move the edges to the correct spots.</p>
+              <p className="madeby">made by justin li.</p>
+            </div>
           </div>
         </div>
       </TimerContext.Provider>

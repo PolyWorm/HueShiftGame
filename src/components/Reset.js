@@ -9,9 +9,9 @@ function Reset(props) {
     let {isActive, isScrambled, setScrambled, setIsActive, time, setTime} = useContext(TimerContext);
     let size = props.size;
     return (
-      <div onClick={() => {fullScramble(edges, setEdges, props.size); setScrambled(true); setIsActive(true); setTime(0)}} className="reset">
+      <button onClick={() => {fullScramble(edges, setEdges, props.size); setScrambled(true); setIsActive(true); setTime(0)}} className="reset">
         <h2 className="text2">new game</h2>
-      </div>
+      </button>
      );
   }
 

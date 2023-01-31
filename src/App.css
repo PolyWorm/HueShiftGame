@@ -13,13 +13,36 @@
   width: 500px;
   height: 200px;
 }
+.instructions {
+  color: #f2f2f2;
+  padding-top: 30px;
+  text-align: left;
+  font-size: 22px;
+  font-weight: 100;
+}
+.madeby {
+  color: #f2f2f2;
+  padding-top: 30px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 100;
+}
+.boldletters {
+  font-weight: 400;
+}
 @media screen and (max-width: 520px) {
+  .instructions {
+    font-size: 14px;
+  }
   .gamecontainer {
     width: 280px;
   }
   .foot {
     width: 280px;
-    height: 200px;
+    height: 400px;
+  }
+  .madeby {
+    font-size: 14px;
   }
 }
 
