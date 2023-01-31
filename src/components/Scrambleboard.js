@@ -39,7 +39,7 @@ function Scrambleboard(props) {
             if (time === highscore) {
                 opacitized = { 
                   opacity: "80%", 
-                  WebkitBackdropFilter: "blur(30px) invert(70%)",
+                  WebkitBackdropFilter: "blur(20px) invert(70%)",
                   backdropFilter: "blur(20px) invert(70%)",
                   transition: "opacity 0.2s ease-out 100ms"
                 }
