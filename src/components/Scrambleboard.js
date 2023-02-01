@@ -48,7 +48,7 @@ function Scrambleboard(props) {
                         style={opacitized} 
                         className="scramble">
                         <h4 className="headingtext">{"new high score!"}</h4>
-                        <h2 className="timetext">{("0" + Math.floor((time / 60000) % 60)).slice(-2)}:{("0" + Math.floor((time / 1000) % 60)).slice(-2)}</h2>
+                        <h2 className="timetext">{("0" + Math.floor((time / 60000) % 60)).slice(-2)}:{("0" + Math.floor((time / 1000) % 60)).slice(-2)}:{("0" + Math.floor((time / 1000) % 60)).slice(-2)}:{("0" + ((time / 10) % 100)).slice(-2)}</h2>
                         <button 
                         onClick={() => { 
                             fullScramble(edges, setEdges, props.size); 
