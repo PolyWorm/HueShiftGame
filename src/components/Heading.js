@@ -22,7 +22,6 @@ function Heading(props) {
             <div className="heading">
                 <div className="logocontainer">
                     <div className="logo"/>
-                    <h1 className="h1">hueshift.li</h1>
                 </div>
                 <Besttime size={size} bestTime={bestTime} setBestTime={setBestTime}
                      bestTime2={bestTime2} setBestTime2={setBestTime2}
