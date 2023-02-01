@@ -67,9 +67,9 @@ function Scrambleboard(props) {
                         style={opacitized} 
                         className="scramble">
                         <h4 className="headingtext">{"here's your time!"}</h4>
-                        <h2 className="timetext">{("0" + Math.floor((time / 60000) % 60)).slice(-2)}:{("0" + Math.floor((time / 1000) % 60)).slice(-2)}</h2>
+                        <h2 className="timetext">{("0" + Math.floor((time / 60000) % 60)).slice(-2)}:{("0" + Math.floor((time / 1000) % 60)).slice(-2)}:{("0" + ((time / 10) % 100)).slice(-2)}</h2>
                         <h4 className="headingtext">{"best time"}</h4>
-                        <h2 className="besttimetext">{("0" + Math.floor((highscore / 60000) % 60)).slice(-2)}:{("0" + Math.floor((highscore / 1000) % 60)).slice(-2)}</h2>
+                        <h2 className="besttimetext">{("0" + Math.floor((highscore / 60000) % 60)).slice(-2)}:{("0" + Math.floor((highscore / 1000) % 60)).slice(-2)}:{("0" + ((highscore / 10) % 100)).slice(-2)}</h2>
                         
                         <button 
                         onClick={() => { 
