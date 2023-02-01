@@ -1,7 +1,10 @@
 .nub {
     background-color: #F2F2F2;
     z-index: 9;
-
+    background: rgba(247, 247, 247, 0.825);
+    box-shadow: 0 4px 30px rgba(39, 39, 39, 0.779);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
 .nubrow {
     display: flex;
