@@ -30,9 +30,11 @@ function App() {
             <Gameboard size={getSize} edges={edges} setEdges={setEdges}  
               setBestTime={setBestTime} setBestTime2={setBestTime2} setBestTime3={setBestTime3} ></Gameboard>
             <div className="foot">
-              <p className="instructions"><strong className="boldletters">instructions:</strong> click the squares to rotate the edges and move the edges to the correct spots.</p>
-              <p className="madeby">made by justin li.</p>
-            </div>
+              <p className="instructions"><strong className="boldletters">instructions</strong>: click the squares to rotate the edges and move the edges to the correct spots.</p>
+              <p className="madeby">made by justin li.  <a href="https://twitter.com/intent/tweet?text=How%20fast%20can%20you%20solve%20this%20puzzle?%20https%3A//hueshift.li/"><strong className="boldletters">share on twitter</strong> </a></p>
+
+
+              </div>
           </div>
         </div>
       </TimerContext.Provider>

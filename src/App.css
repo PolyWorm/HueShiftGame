@@ -13,6 +13,7 @@
   width: 500px;
   height: 200px;
 }
+
 .instructions {
   color: #f2f2f2;
   padding-top: 30px;
@@ -29,6 +30,9 @@
 }
 .boldletters {
   font-weight: 400;
+  color: #f2f2f2;
+  text-decoration: underline;
+  text-decoration-color: #f2f2f2;
 }
 @media screen and (max-width: 520px) {
   .instructions {
