@@ -21,7 +21,7 @@ function Heading(props) {
         <header>
             <div className="heading">
                 <div className="logocontainer">
-                    <div className="logo"/>
+                    <a href="https://hueshift.li/" className="logo"></a>
                 </div>
                 <Besttime size={size} bestTime={bestTime} setBestTime={setBestTime}
                      bestTime2={bestTime2} setBestTime2={setBestTime2}
