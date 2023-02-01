@@ -29,7 +29,7 @@
     height: 10%;
     left: 10%;
     position: absolute;
-    animation: 0.25s cubic-bezier(0, 0.55, 0.45, 1) growWidth 1;
+    animation: 0.25s ease growWidth 1;
 }
 .down {
     width: 0%;
@@ -37,14 +37,14 @@
     position: absolute;
     bottom: 0;
     right: 10%;
-    animation: 0.35s cubic-bezier(0, 0.55, 0.45, 1) growWidth 1;
+    animation: 0.35s ease growWidth 1;
 }
 .left {
     width: 10%;
     height: 0%;
     bottom: 10%;
     position: absolute;
-    animation: 0.35s cubic-bezier(0, 0.55, 0.45, 1) growHeight 1;
+    animation: 0.35s ease growHeight 1;
 }
 .right {
     width: 10%;
@@ -52,7 +52,7 @@
     top: 10%;
     right: 0;
     position: absolute;
-    animation: 0.35s cubic-bezier(0, 0.55, 0.45, 1) growHeight 1;
+    animation: 0.35s ease growHeight 1;
 }
 
 @keyframes growWidth {
